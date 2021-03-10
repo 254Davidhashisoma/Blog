@@ -17,6 +17,7 @@ config = context.config
 fileConfig(config.config_file_name)
 logger = logging.getLogger('alembic.env')
 
+# template used to generate migration files
 # add your model's MetaData object here
 # for 'autogenerate' support
 # from myapp import mymodel
