@@ -9,7 +9,7 @@ class Config:
     SECRET_KEY = os.environ.get("SECRET_KEY")
     UPLOADED_PHOTOS_DEST = "app/static/photos"
     SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://moringa:hashi123@localhost/blog"
-    # email configurations
+           # email configurations
     MAIL_SERVER = "smtp.gmail.com"
     MAIL_PORT = 587
     MAIL_USE_TLS = True
