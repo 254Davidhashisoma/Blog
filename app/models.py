@@ -89,7 +89,7 @@ class Post(db.Model):
     @classmethod
     def get_all_posts(cls):
         return Post.query.order_by(Post.posted_at).all()
-#configuring the displaying reviews
+ #configuring the displaying reviews
 
 class Comment(db.Model):
     __tablename__ = "comments"
