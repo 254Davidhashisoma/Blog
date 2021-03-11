@@ -12,16 +12,16 @@ from alembic import context
 # access to the values within the .ini file in use.
 config = context.config
 
-# Interpret the config file for Python logging.
-# This line sets up loggers basically.
+# Interpret the config file   for Python logging.
+# This line sets up loggers  basically.
 fileConfig(config.config_file_name)
 logger = logging.getLogger('alembic.env')
 
-# template used to generate migration files
+# template used to generate   migration files
 # add your model's MetaData object here
 # for 'autogenerate' support
 # from myapp import mymodel
-# target_metadata = mymodel.Base.metadata
+# target_metadata =   mymodel.Base.metadata
 from flask import current_app
 config.set_main_option(
     'sqlalchemy.url',
