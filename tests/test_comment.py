@@ -20,3 +20,4 @@ class TestPost(unittest.TestCase):
         self.assertTrue(isinstance(self.user_Hashisoma, User))
         self.assertTrue(isinstance(self.new_post, Post))
         self.assertTrue(isinstance(self.new_comment, Comment))
+#test posting change qoutes
