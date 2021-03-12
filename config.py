@@ -8,7 +8,7 @@ class Config:
     # app.config['SECRET_KEY'] = SECRET_KEY
     SECRET_KEY = os.environ.get("SECRET_KEY")
     UPLOADED_PHOTOS_DEST = "app/static/photos"
-    SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://moringa:hashi123@localhost/blog"
+    # SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://moringa:hashi123@localhost/blog"
            # email configurations
     MAIL_SERVER = "smtp.gmail.com"
     MAIL_PORT = 587
@@ -19,19 +19,19 @@ class Config:
 
 class ProdConfig(Config):
     
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("HEROKU_POSTGRESQL_BLACK_URL")
 
 class TestConfig(Config):
     
-    SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://moringa:hashi123@localhost/blog_test"
+    # SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://moringa:hashi123@localhost/blog_test"
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://moringa:hashi123@localhost/blog"
+    # SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://moringa:hashi123@localhost/blog"
     DEBUG = True
 
 
 config_options = {
     "development": DevConfig,
     "production": ProdConfig,
-    "test": TestConfig
+    # "test": TestConfig
 }
