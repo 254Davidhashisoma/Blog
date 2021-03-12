@@ -19,7 +19,7 @@ class Config:
 
 class ProdConfig(Config):
     
-    SQLALCHEMY_DATABASE_URI = os.environ.get("HEROKU_POSTGRESQL_BLACK_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("HEROKU_POSTGRESQL_CRIMSON_URL")
 
 class TestConfig(Config):
     
